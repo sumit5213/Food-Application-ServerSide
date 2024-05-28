@@ -4,6 +4,7 @@ const express = require("express")
 const cors = require("cors");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/user")
+const foodRoutes = require("./routes/food")
 
 
 const port = 3003;
@@ -13,8 +14,8 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use("/api/users",userRoutes);
-
+app.use("/api/user",userRoutes);
+app.use("/api/foods",foodRoutes);
 
 
 
